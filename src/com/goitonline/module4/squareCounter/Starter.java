@@ -35,14 +35,14 @@ public class Starter {
                 break;
             default:
                 System.out.println("Invalid value");
-                break;
+                return;
         }
     }
 
-    public static int modeSelector (String message1) {
+    public static int modeSelector (String message) {
         while (true){
             try {
-                System.out.println(message1);
+                System.out.println(message);
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextInt();
             } catch (Exception E) {

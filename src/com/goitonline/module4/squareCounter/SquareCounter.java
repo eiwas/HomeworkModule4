@@ -10,7 +10,7 @@ public class SquareCounter {
         return triangleSquareResult;
     }
     public double rectangleSquare (double rectangleSideA, double rectangleSideB) {
-        double rectangleSquareResult = rectangleSideA * rectangleSideA;
+        double rectangleSquareResult = rectangleSideA * rectangleSideB;
         return rectangleSquareResult;
     }
     public double circleSquare (double circleRadius) {
