@@ -9,7 +9,6 @@ public class Starter {
     public static void main(String[] args) {
         System.out.println("Here is the program to calculate the areas of various shapes.");
         System.out.println("First select the shape the area of which you need to calculate.");
-        System.out.println("");
         int modeSelect = Starter.modeSelector("Press 1 to calculate the triangle area, 2 to calculate the rectangle area, 3 to calculate the circle area.");
         switch (modeSelect) {
             case 1:
