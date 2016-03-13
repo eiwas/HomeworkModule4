@@ -9,7 +9,6 @@ public class Starter {
     public static void main(String[] args) {
         System.out.println("Here is the program to convert between Celsius and Fahrenheit.");
         System.out.println("First select the direction of conversion.");
-        System.out.println("");
         int modeSelect = Starter.modeSelector("Press 1 to convert from Celsius to Fahrenheit or 2 to convert from Fahrenheit to Celcius");
         switch (modeSelect) {
             case 1:
