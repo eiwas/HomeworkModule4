@@ -2,7 +2,7 @@ package com.goitonline.module6;
 
 import java.util.Arrays;
 
-public class SortingLogic {
+public class SortingLogicNew {
     public int[] arraySorter(int[] myArray2) {
         boolean changeHappened = true;
         while (changeHappened) {
