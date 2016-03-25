@@ -1,4 +1,4 @@
-package com.goitonline.module6;
+package com.goitonline.module6.arraySorter;
 
 import java.util.Arrays;
 
