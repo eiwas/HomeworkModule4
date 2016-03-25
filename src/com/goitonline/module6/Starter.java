@@ -13,34 +13,35 @@ public class Starter {
         System.out.println("This is a programme for working with arrays");
         System.out.println("First select the required operation.");
         int modeSelect = Starter.modeSelector("Press 1 to display the minimum and maximum numbers in the array or 2 to sort the array");
-        switch (modeSelect) {
-            case 1:
-                x = Starter.screenReader("Enter the number of elements in array");
-                int[] myArray = new int[x];
-                for (int i = 0; i < x -1; i++) {
-                    myArray[i] = (int) (10 * Math.random());
-                }
-                SortingLogic myMinMax = new SortingLogic();
-                int minimumValue = myMinMax.getMinValue(myArray);
-                int maximumValue = myMinMax.getMaxValue(myArray);
-                System.out.println("The minimum value of the array is " + minimumValue + " and the maximum value of array is " + maximumValue + ".");
-                break;
-            case 2:
-                x = Starter.screenReader("Enter the number of elements in array");
-                int[] myArray2 = new int[x];
-                for (int i = 0; i < x -1; i++) {
-                    myArray2[i] = (int) (10 * Math.random());
-                }
-                SortingLogic mySorting = new SortingLogic();
-                int[] sortingResult = mySorting.arraySorter(myArray2);
-                System.out.println("The sorted array now looks as follows");
-                for (int element : myArray2){
-                    System.out.println(element);
-                }
-                break;
-            default:
-                System.out.println("Invalid value");
-                break;
+        while (true) {
+            switch (modeSelect) {
+                case 1:
+                    x = Starter.screenReader("Enter the number of elements in array");
+                    int[] myArray = new int[x];
+                    for (int i = 0; i < x -1; i++) {
+                        myArray[i] = (int) (10 * Math.random());
+                    }
+                    SortingLogic myMinMax = new SortingLogic();
+                    int minimumValue = myMinMax.getMinValue(myArray);
+                    int maximumValue = myMinMax.getMaxValue(myArray);
+                    System.out.println("The minimum value of the array is " + minimumValue + " and the maximum value of array is " + maximumValue + ".");
+                    break;
+                case 2:
+                    x = Starter.screenReader("Enter the number of elements in array");
+                    int[] myArray2 = new int[x];
+                    for (int i = 0; i < x -1; i++) {
+                        myArray2[i] = (int) (10 * Math.random());
+                    }
+                    SortingLogic mySorting = new SortingLogic();
+                    int[] sortingResult = mySorting.arraySorter(myArray2);
+                    System.out.println("The sorted array now looks as follows");
+                    for (int element : myArray2){
+                        System.out.println(element);
+                    }
+                    break;
+                default:
+                    throw new IllegalStateException();
+            }
         }
     }
     public static int modeSelector (String message1) {
@@ -48,12 +49,7 @@ public class Starter {
             try {
                 System.out.println(message1);
                 Scanner scanner = new Scanner(System.in);
-                if (scanner.nextInt() < 0) {
-                    throw new NegativeParameterValue(scanner);
-                }
                 return scanner.nextInt();
-            } catch (NegativeParameterValue ex) {
-                System.out.println("This value can not be negative");
             } catch (Exception E) {
                 System.out.println("Bad input. Please try again!");
             }
