@@ -1,4 +1,4 @@
-package com.goitonline.module6.arraySorter;
+package com.goitonline.module6;
 
 import com.goitonline.module5.SortingLogic;
 
